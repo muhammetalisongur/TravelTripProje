@@ -16,4 +16,5 @@
 - Hakkimizda
 - Blog Duzenleme
 - Veri Tabanindan bloga veri getirme ve gosterme
-- 
+- IEnumerable
+- Son Yazilar kismi yorumlar kismi duzenlendir

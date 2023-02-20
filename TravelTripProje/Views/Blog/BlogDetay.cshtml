@@ -55,26 +55,18 @@
                         </p>
                     }
                 </div>
-                <ul class="comment-list">
-                    <li>
-                        <img src="~/Template/blog/images/avatar.png" class="img-responsive" alt="">
-                        <div class="desc">
-                            <p>Songur: Yorumu </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
-
-                <ul class="comment-list">
-                    <li>
-                        <img src="~/Template/blog/images/avatar.png" class="img-responsive" alt="">
-                        <div class="desc">
-                            <p>Songur: Yorumu </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
-
+                @foreach (var item in Model.deger2)
+                {
+                    <ul class="comment-list">
+                        <li>
+                            <img src="~/Template/blog/images/avatar.png" class="img-responsive" alt="">
+                            <div class="desc">
+                                <p><b>@item.KullaniciAdi:</b> @item.Yorum </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                }
                 <div class="content-form">
                     <h3>Yorum Yap</h3>
                     <form>

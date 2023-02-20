@@ -1,5 +1,4 @@
-﻿@using TravelTripProje.Models.Entity
-@model List<Blog>
+﻿@model TravelTripProje.Models.Entity.BlogYorum
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -40,11 +39,11 @@
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
-                @foreach (var item in Model)
+                @foreach (var item in Model.deger1)
                 {
                     <div class="single-grid">
                         <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
-                        <b><a href="/Blog/BlogDetay/@item.ID">@item.Baslik</a></b>                    
+                        <b><a href="/Blog/BlogDetay/@item.ID">@item.Baslik</a></b>
                         <p>
                             @item.Aciklama
                         </p>
@@ -56,12 +55,12 @@
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>Son Yazilar</h3>
-                    <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
-                    </ul>
+                    @foreach (var i in Model.deger3)
+                    {
+                        <ul>
+                            <li><a href="/Blog/BlogDetay/@i.ID#">@i.Baslik</a></li>
+                        </ul>
+                    }
                 </div>
                 <div class="comments">
                     <h3>Son Yorumlar</h3>
