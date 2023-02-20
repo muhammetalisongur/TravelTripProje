@@ -17,4 +17,13 @@
 - Blog Duzenleme
 - Veri Tabanindan bloga veri getirme ve gosterme
 - IEnumerable
-- Son Yazilar kismi yorumlar kismi duzenlendir
+- Son Yazilar kismi yorumlar kismi duzenlendi
+### 21-30'a kadar
+
+-  Slider'a veritabanindadaki blog resimleri eklendi ve link verme islemi yapildi
+- Partial View Kullanimi
+- Partial icinde Partial View kullanimi
+- Substring kavrami ve kullanimi
+- Top 10 Listesi
+- Begendigim yerler iki partial view ile birlestirildi.
+- Admin Paneli siteye dahil etme

@@ -42,7 +42,7 @@
                 @foreach (var item in Model.deger1)
                 {
                     <div class="single-grid">
-                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
+                        <a href="/Blog/BlogDetay/@item.ID"><img src="@item.BlogImage" alt="" style="margin-bottom:20px; width:730px;height:350px;" /></a>
                         <b><a href="/Blog/BlogDetay/@item.ID">@item.Baslik</a></b>
                         <p>
                             @item.Aciklama
