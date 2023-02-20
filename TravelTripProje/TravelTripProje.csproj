@@ -124,14 +124,26 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302200623169_CreateTable.cs" />
+    <Compile Include="Migrations\202302200623169_CreateTable.designer.cs">
+      <DependentUpon>202302200623169_CreateTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302200826061_YorumlarVirtualAdd.cs" />
+    <Compile Include="Migrations\202302200826061_YorumlarVirtualAdd.designer.cs">
+      <DependentUpon>202302200826061_YorumlarVirtualAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Admin.cs" />
     <Compile Include="Models\Entity\AdresBlog.cs" />
     <Compile Include="Models\Entity\AnaSayfa.cs" />
     <Compile Include="Models\Entity\Blog.cs" />
+    <Compile Include="Models\Entity\BlogYorum.cs" />
     <Compile Include="Models\Entity\Context.cs" />
     <Compile Include="Models\Entity\Hakkimizda.cs" />
     <Compile Include="Models\Entity\Iletisim.cs" />
@@ -175,6 +187,26 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\blog\about.html" />
+    <Content Include="Template\blog\contact.html" />
+    <Content Include="Template\blog\css\bootstrap.css" />
+    <Content Include="Template\blog\css\style.css" />
+    <Content Include="Template\blog\images\avatar.png" />
+    <Content Include="Template\blog\images\icon3.png" />
+    <Content Include="Template\blog\images\logo.jpg" />
+    <Content Include="Template\blog\images\man.jpg" />
+    <Content Include="Template\blog\images\more.png" />
+    <Content Include="Template\blog\images\Muhammet-Ali-Songur.png" />
+    <Content Include="Template\blog\images\post1.jpg" />
+    <Content Include="Template\blog\images\post2.jpg" />
+    <Content Include="Template\blog\images\post3.jpg" />
+    <Content Include="Template\blog\images\search.png" />
+    <Content Include="Template\blog\index.html" />
+    <Content Include="Template\blog\js\easing.js" />
+    <Content Include="Template\blog\js\jquery.min.js" />
+    <Content Include="Template\blog\js\move-top.js" />
+    <Content Include="Template\blog\single.html" />
+    <Content Include="Template\blog\w3layouts-License.txt" />
     <Content Include="Template\web\about.html" />
     <Content Include="Template\web\contact.html" />
     <Content Include="Template\web\css\slider.css" />
@@ -224,7 +256,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\BlogDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -255,6 +289,14 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.6.3.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.3.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202302200623169_CreateTable.resx">
+      <DependentUpon>202302200623169_CreateTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302200826061_YorumlarVirtualAdd.resx">
+      <DependentUpon>202302200826061_YorumlarVirtualAdd.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

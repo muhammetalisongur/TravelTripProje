@@ -12,10 +12,6 @@ namespace TravelTripProje.Controllers
         {
             return View();
         }
-        public ActionResult About()
-        {
-            return View();
-        }
 
     }
 }

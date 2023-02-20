@@ -1,0 +1,23 @@
+﻿@using TravelTripProje.Models.Entity
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkimizda</h3>
+            <p>
+                @foreach (var item in Model)
+                {
+                    <img src="@item.FotoUrl" height="400" width="1000" alt="" />
+                    @item.Aciklama
+                }
+        </p>
+
+    </div>
+</div>
+</div>
+
