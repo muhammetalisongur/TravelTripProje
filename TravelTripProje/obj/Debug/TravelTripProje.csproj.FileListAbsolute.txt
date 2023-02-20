@@ -129,3 +129,7 @@ D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\roslyn\VBCSCompiler.e
 D:\GitHub\source\repos\TravelTripProje\TravelTripProje\obj\Debug\TravelTripProje.Migrations.CreateTable.resources
 D:\GitHub\source\repos\TravelTripProje\TravelTripProje\obj\Debug\TravelTripProje.csproj.GenerateResource.cache
 D:\GitHub\source\repos\TravelTripProje\TravelTripProje\obj\Debug\TravelTripProje.Migrations.YorumlarVirtualAdd.resources
+D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.dll
+D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.Mvc.dll
+D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.xml
+D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.Mvc.xml

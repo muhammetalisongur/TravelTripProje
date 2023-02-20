@@ -27,3 +27,11 @@
 - Top 10 Listesi
 - Begendigim yerler iki partial view ile birlestirildi.
 - Admin Paneli siteye dahil etme
+
+### 31-40'a kadar
+
+- Admin Blog paneli hazirlandi
+- Admin Blog sayfalama (PagedList) yapildi
+- Blog Ekleme Sayfası Yapıldı
+- Blog Silme Islemi Yapildi
+- Blog Guncelleme Islemi
