@@ -12,6 +12,8 @@ namespace TravelTripProje.Controllers
     {
         // GET: Admin
         Context c = new Context();
+
+        [Authorize]
         public ActionResult Index(int SayfaNo = 1)
         {
             var degerler = c.Blogs.OrderBy(x=>x.ID).ToPagedList(SayfaNo, 10);
@@ -50,6 +52,34 @@ namespace TravelTripProje.Controllers
             deger.Tarih = b.Tarih;
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult YorumListesi()
+        {
+            var yorumlar = c.Yorumlars.ToList();
+            return View(yorumlar);
+        }
+
+        public ActionResult YorumSil(int id)
+        {
+            var degerler = c.Yorumlars.Find(id);
+            c.Yorumlars.Remove(degerler);
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+        }
+        
+        public ActionResult YorumGetir(int id)
+        {
+            var degerler = c.Yorumlars.Find(id);
+            return View("YorumGetir", degerler);
+        }
+        public ActionResult YorumGuncelle(Yorumlar y)
+        {
+            var degerler = c.Yorumlars.Find(y.ID);
+            degerler.KullaniciAdi = y.KullaniciAdi;
+            degerler.Mail = y.Mail;
+            degerler.Yorum = y.Yorum;
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
         }
     }
 }

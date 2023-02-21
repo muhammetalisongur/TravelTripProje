@@ -1,0 +1,31 @@
+﻿@model TravelTripProje.Models.Entity.Yorumlar
+
+@{
+    ViewBag.Title = "YorumGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yorum Duzenleme Sayfasi</h2>
+<br />
+@using (Html.BeginForm("YorumGuncelle", "Admin", FormMethod.Post))
+{
+    <b>@Html.LabelFor(x => x.ID)</b>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <b>@Html.LabelFor(x => x.KullaniciAdi)</b>
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    <b>@Html.LabelFor(x => x.Mail)</b>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <b>@Html.LabelFor(x => x.Yorum)</b>
+    @Html.TextAreaFor(x => x.Yorum, new { @class = "form-control" })
+    <br />
+    @*<b>@Html.LabelFor(x => x.Blog)</b>
+    @Html.TextBoxFor(x => x.Blog.Baslik, new { @class = "form-control" })
+    <br />*@
+
+    <button class="btn btn-primary">Yorumu Guncelle</button>
+
+
+}

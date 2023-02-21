@@ -1,5 +1,14 @@
 # TravelTripProje
  50 Derste Asp.Net Mvc ile Tatil & Seyahat Sitesi
+ 
+ ## Ekstra Eklenecekler
+ 
+ - Yorumlara PagedList Eklenecek
+ - Iletisim Sayfasi Eklenecek
+ - login ekraninda giris basarisiz ise hata verdir viewbag ile
+ - Admin panelinde hakkimizda kismi eklenecek
+ - Devamini Oku Kismi Eklenecek Bloglara
+ - Admin Paneline Sitede ekle arama kismina
 
 ### 1-10'a kadar
 
@@ -35,3 +44,12 @@
 - Blog Ekleme Sayfası Yapıldı
 - Blog Silme Islemi Yapildi
 - Blog Guncelleme Islemi
+- Yorum Yapma
+
+### 41-50'a kadar
+
+- Admin Yorum Sil ve Guncelle
+- Login Paneli
+- Authentication ve Authorize islemi yapildi
+- Admin panelinden cikis(LogOut) eklendi
+- Siteyi yayinlama
