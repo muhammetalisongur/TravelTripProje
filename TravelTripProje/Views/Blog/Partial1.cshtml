@@ -1,0 +1,15 @@
+﻿@using TravelTripProje.Models.Entity
+@model List<Yorumlar>
+
+<div class="comments">
+    <h3>Son Yorumlar</h3>
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li><a href="#">@item.KullaniciAdi </a> diyor ki: <a href="#">@item.Yorum</a></li>
+        </ul>
+    }
+
+
+
+</div>

@@ -287,6 +287,8 @@
     <Content Include="Template\weblogin\fonts\Asap-Regular.ttf" />
     <Content Include="Template\weblogin\fonts\Audiowide-Regular.ttf" />
     <Content Include="Views\GirisYap\Login.cshtml" />
+    <Content Include="Views\GirisYap\YeniKullanici.cshtml" />
+    <Content Include="Views\Blog\Partial1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

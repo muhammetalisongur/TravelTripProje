@@ -41,5 +41,10 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return PartialView();
         }
+        public PartialViewResult Partial1()
+        {
+            var degerler = c.Yorumlars.OrderByDescending(x=>x.ID).Take(3).ToList();
+            return PartialView(degerler);
+        }
     }
 }

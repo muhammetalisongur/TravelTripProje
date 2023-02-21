@@ -5,9 +5,10 @@
  
  - Yorumlara PagedList Eklenecek
  - Iletisim Sayfasi Eklenecek
- - login ekraninda giris basarisiz ise hata verdir viewbag ile
+ - login ekraninda giris basarisiz ise hata verdir viewbag ile (tamamlandi)
+ - kayıt ol sayfası yap (tamamlandı)
  - Admin panelinde hakkimizda kismi eklenecek
- - Devamini Oku Kismi Eklenecek Bloglara
+ - Devamini Oku Kismi Eklenecek Bloglara (tamamlandi)
  - Admin Paneline Sitede ekle arama kismina
 
 ### 1-10'a kadar

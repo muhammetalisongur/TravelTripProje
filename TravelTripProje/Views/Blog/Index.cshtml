@@ -45,7 +45,9 @@
                         <a href="/Blog/BlogDetay/@item.ID"><img src="@item.BlogImage" alt="" style="margin-bottom:20px; width:730px;height:350px;" /></a>
                         <b><a href="/Blog/BlogDetay/@item.ID">@item.Baslik</a></b>
                         <p>
-                            @item.Aciklama
+                            @item.Aciklama.Substring(0, 300)
+                        <p><a href="/Blog/BlogDetay/@item.ID"><span class="read">Devamini Oku >></span></a></p>
+
                         </p>
                     </div>
                     <br /><br />
@@ -62,14 +64,16 @@
                         </ul>
                     }
                 </div>
-                <div class="comments">
-                    <h3>Son Yorumlar</h3>
-                    <ul>
-                        <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
-                        <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
-                        <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
-                    </ul>
-                </div>
+                @*<div class="comments">
+            <h3>Son Yorumlar</h3>
+                <ul>
+                    <li><a href="#">Amanda </a> on <a href="#">Hello Word</a></li>
+                </ul>
+
+
+        </div>*@
+
+                @Html.Action("Partial1", "Blog")
             </div>
             <div class="clearfix"></div>
         </div>

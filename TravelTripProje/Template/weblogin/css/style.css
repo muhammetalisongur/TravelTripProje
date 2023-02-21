@@ -101,6 +101,7 @@ border-radius: 0px;
 font-family: 'Open Sans', sans-serif;
 letter-spacing:1.6px;
 color:#fff;
+border-radius:10%;
 }
 
 .mail-form-agile input[type="submit"]{
@@ -315,8 +316,4 @@ padding:75px 30px;
 
 
 }
-
-
-
-
 

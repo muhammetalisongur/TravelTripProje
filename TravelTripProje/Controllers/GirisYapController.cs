@@ -32,12 +32,29 @@ namespace TravelTripProje.Controllers
                 Session["Kullanici"] = bilgiler.Kullanici.ToString();
                 return RedirectToAction("Index", "Admin");
             }
-            return View();
+            else
+            {
+                ViewBag.hata = "Sifrenizi veya Kullanici Adiniz Hatali Girdiniz...";
+                return View();
+            }
         }
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Login", "GirisYap");
+        }
+
+        [HttpGet]
+        public ActionResult YeniKullanici()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniKullanici(Admin p)
+        {
+            c.Admins.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Login");
         }
     }
 }
