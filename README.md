@@ -3,7 +3,7 @@
  
  ## Ekstra Eklenecekler
  
- - Yorumlara PagedList Eklenecek
+ - Yorumlara DataTable Eklenecek
  - Iletisim Sayfasi Eklenecek
  - login ekraninda giris basarisiz ise hata verdir viewbag ile (tamamlandi)
  - kayıt ol sayfası yap (tamamlandı)

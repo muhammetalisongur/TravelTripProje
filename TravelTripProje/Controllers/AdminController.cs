@@ -14,9 +14,9 @@ namespace TravelTripProje.Controllers
         Context c = new Context();
 
         [Authorize]
-        public ActionResult Index(int SayfaNo = 1)
+        public ActionResult Index()
         {
-            var degerler = c.Blogs.OrderBy(x=>x.ID).ToPagedList(SayfaNo, 10);
+            var degerler = c.Blogs.ToList();
             return View(degerler);
         }
         [HttpGet]
