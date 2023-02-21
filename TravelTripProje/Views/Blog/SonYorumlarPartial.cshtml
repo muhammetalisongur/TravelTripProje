@@ -1,0 +1,10 @@
+﻿@using TravelTripProje.Models.Entity
+@model List<Yorumlar>
+
+@foreach (var item in Model.Take(5))
+{
+    <ul>
+        <li><a href="#">@item.KullaniciAdi </a> diyor ki: <a href="#">@item.Yorum</a></li>
+    </ul>
+}
+

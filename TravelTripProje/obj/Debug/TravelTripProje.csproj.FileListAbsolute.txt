@@ -133,3 +133,10 @@ D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.dll
 D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.Mvc.dll
 D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.xml
 D:\GitHub\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.Mvc.xml
+C:\Users\MAS\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.dll
+C:\Users\MAS\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.Mvc.dll
+C:\Users\MAS\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.xml
+C:\Users\MAS\source\repos\TravelTripProje\TravelTripProje\bin\PagedList.Mvc.xml
+C:\Users\MAS\source\repos\TravelTripProje\TravelTripProje\obj\Debug\TravelTripProje.Migrations.CreateTable.resources
+C:\Users\MAS\source\repos\TravelTripProje\TravelTripProje\obj\Debug\TravelTripProje.Migrations.YorumlarVirtualAdd.resources
+C:\Users\MAS\source\repos\TravelTripProje\TravelTripProje\obj\Debug\TravelTripProje.csproj.GenerateResource.cache

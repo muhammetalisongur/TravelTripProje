@@ -9,6 +9,7 @@
  - kayıt ol sayfası yap (tamamlandı)
  - Admin panelinde hakkimizda kismi eklenecek
  - Devamini Oku Kismi Eklenecek Bloglara (tamamlandi)
+ - Blog Arsiv, Son Yorum, Son Yazi Listesi (tamamlandi 
  - Admin Paneline Sitede ekle arama kismina
 
 ### 1-10'a kadar

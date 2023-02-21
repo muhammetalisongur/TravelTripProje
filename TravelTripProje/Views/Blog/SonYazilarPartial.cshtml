@@ -1,0 +1,9 @@
+﻿@using TravelTripProje.Models.Entity
+@model List<Blog>
+
+@foreach (var i in Model.Take(5))
+    {
+        <ul>
+            <li><a href="/Blog/BlogDetay/@i.ID">@i.Baslik</a></li>
+        </ul>
+    }

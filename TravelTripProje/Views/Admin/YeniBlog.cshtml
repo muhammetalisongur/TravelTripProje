@@ -4,6 +4,8 @@
     ViewBag.Title = "YeniBlog";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<link rel="stylesheet" href="~/Template/MCDatepicker-master/dist/mc-calendar.min.css" />
+<script src="~/Template/MCDatepicker-master/dist/mc-calendar.min.js"></script>
 
 <h2>Yeni Blog Ekleme</h2>
 <br />
@@ -12,7 +14,8 @@
     @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
     <br />
     <b>@Html.LabelFor(x => x.Tarih)</b>
-    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <input id="tarih" type="text" placeholder="Tarih Seçiniz" name="Tarih"class="form-control"/>
+    @*@Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })*@
     <br />
     <b>@Html.LabelFor(x => x.Aciklama)</b>
     @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
@@ -25,3 +28,36 @@
 
 </form>
 
+<script>
+    const myDatePicker = MCDatepicker.create({
+        el: '#tarih', // input id ile eşleşmeli
+        showCalendarDisplay: false, // Takvim görünümü istiyorsanız `true` yapınız
+        dateFormat: 'DD-MM-YYYY', // Tarih formatı
+        customClearBTN: 'Temizle', // Temizle butonu yazısı
+        customOkBTN: 'Tamam', // Tamam butonu yazısı
+        customCancelBTN: 'İptal Et', // İptal Et butonu yazısı
+        customWeekDays: [
+            'Pazartesi',
+            'Salı',
+            'Çarşamba',
+            'Perşembe',
+            'Cuma',
+            'Ctesi',
+            'Pazar'
+        ], // Türkçe gün isimleri
+        customMonths: [
+            'Ocak',
+            'Şubat',
+            'Mart',
+            'Nisan',
+            'Mayıs',
+            'Haziran',
+            'Temmuz',
+            'Ağustos',
+            'Eylül',
+            'Ekim',
+            'Kasım',
+            'Aralık'
+        ] // Türkçe ay isimleri
+    });
+</script> 
