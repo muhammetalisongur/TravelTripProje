@@ -67,16 +67,7 @@
                         </li>
                     </ul>
                 }
-                <div class="content-form">
-                    <h3>Yorum Yap</h3>
-                    <form>
-                        <input type="text" placeholder="Kullanici Adi" required />
-                        <input type="text" placeholder="Mail Adresi" required />
-                        <textarea placeholder="Yorum"></textarea>
-                        <input type="submit" value="Gonder" />
-                    </form>
-                </div>
-            </div>
+                @Html.Action("YorumYap","Blog")
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>RECENT POSTS</h3>
