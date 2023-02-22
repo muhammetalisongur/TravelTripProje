@@ -2,7 +2,10 @@
  50 Derste Asp.Net Mvc ile Tatil & Seyahat Sitesi
  
  ## Ekstra Eklenecekler
- 
+ - Admin blog listelemeye resimleri goster.
+ - Yeni blog eklemeye dosyadan resim yukleme (tamamlandi)
+ - Blog duzenlemeye dosyadan resim yukleme (tamamlandi)
+ - tarih ekle (tamamlandi)
  - Yorum ve Blog Tablosu Duzenlenecek (tamamlandi)
  - Yorumlara PagedList Eklenecek (tamamlandi)
  - Iletisim Sayfasi Eklenecek

@@ -1,0 +1,52 @@
+﻿@model List<TravelTripProje.Models.Entity.Hakkimizda>
+@{
+    ViewBag.Title = "Hakkimizda";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h2>Hakkımızda</h2>
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style=" text-align: center; height: 3%; width: 3%;">ID</th>
+            <th>Hakkımızda</th>
+            <th style=" text-align: center;  width: 9%;">Fotograf</th>
+            <th style=" text-align: center;width: 7%;">Sil</th>
+            <th style=" text-align: center;  width: 9%;">Guncelle</th>
+            <th style=" text-align: center;  width: 9%;">Detaylar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th style=" text-align: center; height: 3%; width: 3%;">@item.ID</th>
+                <th>@item.Aciklama</th>
+                @*<th style=" text-align: center;  width: 9%;">@item.FotoUrl</th>*@
+                <th><img src="@item.FotoUrl" width="200" height="200" /></th>
+
+                <th style=" text-align: center;width: 7%;"><a href="/Admin/HakkimizdaSil/@item.ID" class="btn btn-danger">Sil</a></th>
+                <th style=" text-align: center;  width: 9%;"><a href="/Admin/HakkimizdaGetir/@item.ID" class="btn btn-warning">Guncelle</a></th>
+                <th style=" text-align: center;  width: 9%;"><a href="/About/Index" class="btn btn-dark">Detay</a></th>
+            </tr>
+
+        }
+    </tbody>
+</table>
+<a href="/Admin/YeniHakkimizda" class="btn btn-primary">Yeni Hakkimizda Ekle</a>
+
+
+@*<h2>Hakkımızda</h2>
+@foreach (var item in Model)
+{
+    <img src="@item.FotoUrl" style="width:970px; height:350px" alt="" />
+    <br />
+    <br />
+    @item.Aciklama
+}
+<br />
+<br />
+<br />*@

@@ -1,6 +1,7 @@
 ﻿using PagedList;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,12 +13,10 @@ namespace TravelTripProje.Controllers
     {
         // GET: Admin
         Context c = new Context();
-        
-
         [Authorize]
         public ActionResult Index(int SayfaNo = 1)
         {
-            var degerler = c.Blogs.OrderBy(x => x.ID).ToPagedList(SayfaNo,5);
+            var degerler = c.Blogs.OrderByDescending(x => x.ID).ToPagedList(SayfaNo, 5);
             return View(degerler);
         }
         [HttpGet]
@@ -28,8 +27,16 @@ namespace TravelTripProje.Controllers
         [HttpPost]
         public ActionResult YeniBlog(Blog p)
         {
-            c.Blogs.Add(p);
-            c.SaveChanges();
+            if (Request.Files.Count > 0)
+            {
+                string dosyaYolu = Path.GetFileName(Request.Files[0].FileName);
+                string yol = "~/Images/" + dosyaYolu;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                p.BlogImage = "/Images/" + dosyaYolu;
+                c.Blogs.Add(p);
+                c.SaveChanges();
+            }
+                        
             return RedirectToAction("Index");
         }
         public ActionResult BlogSil(int id)
@@ -46,17 +53,27 @@ namespace TravelTripProje.Controllers
         }
         public ActionResult BlogGuncelle(Blog b)
         {
-            var deger = c.Blogs.Find(b.ID);
-            deger.Baslik = b.Baslik;
-            deger.Aciklama = b.Aciklama;
-            deger.BlogImage = b.BlogImage;
-            deger.Tarih = b.Tarih;
-            c.SaveChanges();
+            if (Request.Files.Count > 0)
+            {
+                string dosyaYolu = Path.GetFileName(Request.Files[0].FileName);
+                string yol = "~/Images/" + dosyaYolu;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                b.BlogImage = "/Images/" + dosyaYolu;
+                
+                var deger = c.Blogs.Find(b.ID);
+                deger.Baslik = b.Baslik;
+                deger.Aciklama = b.Aciklama;
+                deger.BlogImage = b.BlogImage;
+                deger.Tarih = b.Tarih;
+                c.SaveChanges();
+
+            }
+            
             return RedirectToAction("Index");
         }
         public ActionResult YorumListesi(int SayfaNo = 1)
         {
-            var yorumlar = c.Yorumlars.OrderBy(x => x.ID).ToPagedList(SayfaNo,5);
+            var yorumlar = c.Yorumlars.OrderBy(x => x.ID).ToPagedList(SayfaNo, 5);
             return View(yorumlar);
         }
 
@@ -67,7 +84,7 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("YorumListesi");
         }
-        
+
         public ActionResult YorumGetir(int id)
         {
             var degerler = c.Yorumlars.Find(id);
@@ -82,6 +99,32 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("YorumListesi");
         }
-            
+
+        public ActionResult Hakkimizda()
+        {
+            var degerler = c.Hakkimizdas.ToList();
+            return View(degerler);
+        }
+
+        [HttpGet]
+        public ActionResult YeniHakkimizda()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniHakkimizda(Hakkimizda h)
+        {
+            if (Request.Files.Count > 0)
+            {
+                string dosyaYolu = Path.GetFileName(Request.Files[0].FileName);
+                string yol = "~/Images/" + dosyaYolu;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                h.FotoUrl = "/Images/" + dosyaYolu;
+                c.Hakkimizdas.Add(h);
+                c.SaveChanges();
+            }
+
+            return RedirectToAction("Hakkimizda");
+        }
     }
 }

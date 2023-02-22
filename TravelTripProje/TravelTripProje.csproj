@@ -574,9 +574,12 @@
     <Content Include="Template\MCDatepicker-master\src\scss\_utilities.display.scss" />
     <Content Include="Views\Blog\SonYazilarPartial.cshtml" />
     <Content Include="Views\Blog\ArsivPartial.cshtml" />
+    <Content Include="Views\Admin\Hakkimizda.cshtml" />
+    <Content Include="Views\Admin\YeniHakkimizda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

@@ -6,10 +6,10 @@
 
 <h2>Blog Duzenleme Sayfasi</h2>
 <br />
-@using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
+@using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <b>@Html.LabelFor(x => x.ID)</b>
-    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly="readonly" })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
     <br />
     <b>@Html.LabelFor(x => x.Baslik)</b>
     @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
@@ -18,9 +18,14 @@
     @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
     <br />
     <b>@Html.LabelFor(x => x.Aciklama)</b>
-    @Html.TextAreaFor(x => x.Aciklama,15,1, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
     <br />
-    <b>@Html.LabelFor(x => x.BlogImage)</b>
+    <b>@Html.Label("Resim Dosya'dan Yükle")</b>
+    <br />
+    <input type="file" name="BlogImage" />
+    <br />
+    <br />
+    <b>@Html.Label("Resim URL'den Yükle")</b>
     @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
     <br />
 

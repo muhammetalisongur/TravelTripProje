@@ -1,0 +1,30 @@
+﻿@model TravelTripProje.Models.Entity.Hakkimizda
+
+@{
+    ViewBag.Title = "YeniHakkimizda";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("YeniHakkimizda", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <h2>Yeni Hakkımızda Ekleme Sayfası</h2>
+    <br />
+    <form class="form-group" method="post">
+        <b>@Html.Label("Açıklama:")</b>
+        @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+        <br />
+        <b>@Html.Label("Resim Dosya'dan Yükle")</b>
+        <br />
+        <input type="file" name="FotoUrl" />
+        <br />
+        <br />
+        <b>@Html.Label("Resim URL'den Yükle")</b>
+        @Html.TextBoxFor(x => x.FotoUrl, new { @class = "form-control" })
+        <br />
+
+        <button class="btn btn-primary">Hakkımızda Ekle</button>
+
+    </form>
+}
+
