@@ -1,6 +1,6 @@
 ﻿@using TravelTripProje.Models.Entity
 @model List<Blog>
-@foreach (var item in Model.Take(10))
+@foreach (var item in Model.Take(5))
 {
     <ul>
         <li><a href="/Blog/BlogDetay/@item.ID">@item.Tarih.ToString("dd MMM yyyy")</a></li>

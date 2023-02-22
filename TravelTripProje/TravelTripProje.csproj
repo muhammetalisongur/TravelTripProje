@@ -577,6 +577,7 @@
     <Content Include="Views\Admin\Hakkimizda.cshtml" />
     <Content Include="Views\Admin\YeniHakkimizda.cshtml" />
     <Content Include="Views\Admin\HakkimizdaGetir.cshtml" />
+    <Content Include="Views\Home\Iletisim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

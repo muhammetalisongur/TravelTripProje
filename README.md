@@ -16,6 +16,11 @@
  - Devamini Oku Kismi Eklenecek Bloglara (tamamlandi)
  - Blog Arsiv, Son Yorum, Son Yazi Listesi (tamamlandi 
  - Admin Paneline girisi siteye ekle button olarak (tamamlandi)
+ 
+ 
+ ## Cozulemeyen hatalar
+ - Substring'de belli degeri yazi asmaz ise hata veriyor 
+ - Blog detay sayfasina arsiv son yazilar son yorumlar eklendi her bilgisayarda farkli aciliyor...
 
 ### 1-10'a kadar
 
