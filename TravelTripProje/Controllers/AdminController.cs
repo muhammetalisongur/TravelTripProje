@@ -201,7 +201,7 @@ namespace TravelTripProje.Controllers
             degerler.Telefon = p.Telefon;
          
             c.SaveChanges();
-            return RedirectToAction("YorumListesi");
+            return RedirectToAction("Iletisim");
         }
     }
 }

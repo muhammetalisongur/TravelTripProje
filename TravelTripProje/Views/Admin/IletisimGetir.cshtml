@@ -1,0 +1,43 @@
+﻿@model TravelTripProje.Models.Entity.AdresBlog
+
+@{
+    ViewBag.Title = "IletisimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Adres Duzenleme Sayfasi</h2>
+<br />
+@using (Html.BeginForm("IletisimGuncelle", "Admin", FormMethod.Post))
+{
+    <b>@Html.LabelFor(x => x.ID)</b>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <b>@Html.Label("Başlık")</b>
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control", @required = "required" })
+    <br />
+    <b>@Html.Label("Açıklama")</b>
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control", @required = "required" })
+    <br />
+    <b>@Html.Label("Açık Adres")</b>
+    @Html.TextBoxFor(x => x.AdresAcik, new { @class = "form-control", @required = "required" })
+
+    <br />
+    <b>@Html.Label("Mail Adresi")</b>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @required = "required" })
+
+    <br />
+    <b>@Html.Label("Telefon")</b>
+    @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control", @required = "required" })
+
+
+    <br />
+    <span>
+        <button class="btn btn-primary">Adresi Güncelle</button>
+        <a href="/Admin/Iletisim" class="btn btn-danger">Iptal Et</a>
+    </span>
+    <br />
+    <br />
+
+}
+

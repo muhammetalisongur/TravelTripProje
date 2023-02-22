@@ -8,7 +8,7 @@
  - tarih ekle (tamamlandi)
  - Yorum ve Blog Tablosu Duzenlenecek (tamamlandi)
  - Yorumlara PagedList Eklenecek (tamamlandi)
- - Iletisim Sayfasi Eklenecek (sayfa eklendi lakin veritabani ilisi yapilmadi)
+ - Iletisim Sayfasi Eklenecek (tamamlandi)
  - login ekraninda giris basarisiz ise hata verdir viewbag ile (tamamlandi)
  - kayıt ol sayfası yap (tamamlandı)
  - Admin panelinde hakkimizda kismi eklenecek (tamamlandi)
