@@ -15,6 +15,7 @@
             <th style=" text-align: center; height: 3%; width: 3%;">ID</th>
             <th>Baslik</th>
             <th style=" text-align: center;  width: 9%;">Tarih</th>
+            <th style=" text-align: center;  width: 9%;">Resim</th>
             <th style=" text-align: center;width: 7%;">Sil</th>
             <th style=" text-align: center;  width: 9%;">Guncelle</th>
             <th style=" text-align: center;  width: 9%;">Detaylar</th>
@@ -27,6 +28,7 @@
                 <th style=" text-align: center; height: 3%; width: 3%;">@item.ID</th>
                 <th>@item.Baslik</th>
                 <th style=" text-align: center;  width: 9%;">@item.Tarih.ToShortDateString()</th>
+                <th><img src="@item.BlogImage" width="100" height="50" style=" display: block; margin-left: auto; margin-right: auto;" /></th>
                 <th style=" text-align: center;width: 7%;"><a href="/Admin/BlogSil/@item.ID" class="btn btn-danger">Sil</a></th>
                 <th style=" text-align: center;  width: 9%;"><a href="/Admin/BlogGetir/@item.ID" class="btn btn-warning">Guncelle</a></th>
                 <th style=" text-align: center;  width: 9%;"><a href="/Blog/BlogDetay/@item.ID" class="btn btn-dark">Detay</a></th>
