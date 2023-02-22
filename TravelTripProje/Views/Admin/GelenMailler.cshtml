@@ -1,0 +1,41 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using TravelTripProje.Models.Entity
+@model IPagedList<Iletisim>
+@{
+    ViewBag.Title = "gelenMail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Gelen Mailler Listesi</h2>
+<br />
+<table id="tbl" class="table table-bordered">
+    <thead>
+        <tr>
+            <th style=" text-align: center; height: 3%; width: 3%;">ID</th>
+            <th style=" text-align: center;  width: 20%";>Ad Soyad</th>
+            <th style=" text-align: center;  width: 9%;">Mail</th>
+            <th style=" text-align: center;  width: 20%;">Konu</th>
+            <th style=" text-align: center;">Aciklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th style=" text-align: center; height: 3%; width: 3%;">@item.ID</th>
+                <th style=" text-align: center;  width: 20%;">@item.AdSoyad</th>
+
+                <th style=" text-align: center;"><a href="mailto:@item.Mail">@item.Mail</a></th>
+                <th style=" text-align: center;  width: 9%;">@item.Konu</th>
+                <th>@item.Mesaj</th>  
+            </tr>
+
+        }
+    </tbody>
+</table>
+@Html.PagedListPager(Model, _sayfaNo => Url.Action("Index", "Admin", new { SayfaNo = _sayfaNo }))
+
+
+

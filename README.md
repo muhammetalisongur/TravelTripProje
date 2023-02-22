@@ -17,7 +17,7 @@
  - Blog Arsiv, Son Yorum, Son Yazi Listesi (tamamlandi 
  - Admin Paneline girisi siteye ekle button olarak (tamamlandi)
  - validation dogrulamasi butun sayfalara ekle (tamamlandi)
- 
+ - Mail gonderme ve bunu admin panelinden gorme (tamamlandi)
  
  ## Cozulemeyen hatalar
  - Substring'de belli degeri yazi asmaz ise hata veriyor 

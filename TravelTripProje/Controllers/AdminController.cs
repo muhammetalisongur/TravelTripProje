@@ -203,5 +203,26 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("Iletisim");
         }
+        
+        public ActionResult GelenMailler(int SayfaNo =1)
+        {
+            var degerler = c.Iletisims.OrderByDescending(x => x.ID).ToPagedList(SayfaNo, 5);
+            return View(degerler);
+        }
+        [HttpGet]
+        public ActionResult GelenMaillerEkle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult GelenMaillerEkle(Iletisim p)
+        {            
+                
+                c.Iletisims.Add(p);
+                c.SaveChanges();
+            
+
+            return RedirectToAction("/Home/Iletisim");
+        }
     }
 }
