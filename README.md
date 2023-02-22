@@ -8,7 +8,7 @@
  - tarih ekle (tamamlandi)
  - Yorum ve Blog Tablosu Duzenlenecek (tamamlandi)
  - Yorumlara PagedList Eklenecek (tamamlandi)
- - Iletisim Sayfasi Eklenecek
+ - Iletisim Sayfasi Eklenecek (sayfa eklendi lakin veritabani ilisi yapilmadi)
  - login ekraninda giris basarisiz ise hata verdir viewbag ile (tamamlandi)
  - kayıt ol sayfası yap (tamamlandı)
  - Admin panelinde hakkimizda kismi eklenecek (tamamlandi)
@@ -16,11 +16,13 @@
  - Devamini Oku Kismi Eklenecek Bloglara (tamamlandi)
  - Blog Arsiv, Son Yorum, Son Yazi Listesi (tamamlandi 
  - Admin Paneline girisi siteye ekle button olarak (tamamlandi)
+ - validation dogrulamasi butun sayfalara ekle (tamamlandi)
  
  
  ## Cozulemeyen hatalar
  - Substring'de belli degeri yazi asmaz ise hata veriyor 
  - Blog detay sayfasina arsiv son yazilar son yorumlar eklendi her bilgisayarda farkli aciliyor...
+ - resim yuklemeden herhangi bir guncelleme yapilmiyor.
 
 ### 1-10'a kadar
 

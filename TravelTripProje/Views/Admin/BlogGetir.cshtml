@@ -12,17 +12,17 @@
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
     <br />
     <b>@Html.LabelFor(x => x.Baslik)</b>
-    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control", @required = "required" })
     <br />
     <b>@Html.LabelFor(x => x.Tarih)</b>
-    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", @required = "required" })
     <br />
     <b>@Html.LabelFor(x => x.Aciklama)</b>
-    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control", @required = "required" })
     <br />
     <b>@Html.Label("Resim Yükle")</b>
     <br />
-    <input type="file" name="BlogImage" required/>
+    <input type="file" name="BlogImage" required />
     <br />
     <br />
 
@@ -30,6 +30,7 @@
         <button class="btn btn-primary">Yaziyi Guncelle</button>
         <a href="/Admin/Index/" class="btn btn-danger">Iptal Et</a>
     </span>
-
+    <br />
+    <br />
 
 }

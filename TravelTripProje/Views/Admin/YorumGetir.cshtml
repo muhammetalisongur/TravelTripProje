@@ -13,13 +13,13 @@
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
     <br />
     <b>@Html.LabelFor(x => x.KullaniciAdi)</b>
-    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control", @required = "required" })
     <br />
     <b>@Html.LabelFor(x => x.Mail)</b>
-    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @required = "required" })
     <br />
     <b>@Html.LabelFor(x => x.Yorum)</b>
-    @Html.TextAreaFor(x => x.Yorum, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.Yorum, new { @class = "form-control", @required = "required" })
     <br />
     <button class="btn btn-primary">Yorumu Guncelle</button>
 

@@ -13,17 +13,18 @@
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
     <br />
     <b>@Html.LabelFor(x => x.Aciklama)</b>
-    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control", @required = "required" })
     <br />
     <b>@Html.Label("Resim Yükle")</b>
     <br />
     <input type="file" name="FotoUrl" required />
     <br />
     <br />
-    
+
     <span>
         <button class="btn btn-primary">Hakkımızdayı Guncelle</button>
         <a href="/Admin/Hakkimizda" class="btn btn-danger">Iptal Et</a>
     </span>
-
+    <br />
+    <br />
 }

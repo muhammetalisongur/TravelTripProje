@@ -1,0 +1,44 @@
+﻿@model List<TravelTripProje.Models.Entity.AdresBlog>
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Iletisim Bilgisi</h2>
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style=" text-align: center; height: 3%; width: 3%;">ID</th>
+            <th>Baslik</th>
+            <th style=" text-align: center;  width: 9%;">Açıklama</th>
+            <th style=" text-align: center;  width: 9%;">Adres</th>
+            <th style=" text-align: center;  width: 9%;">Mail</th>
+            <th style=" text-align: center;  width: 15%;">Telefon</th>
+            <th style=" text-align: center;width: 7%;">Sil</th>
+            <th style=" text-align: center;  width: 9%;">Guncelle</th>
+            <th style=" text-align: center;  width: 9%;">Detaylar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th style=" text-align: center; height: 3%; width: 3%;">@item.ID</th>
+                <th>@item.Baslik</th>
+                <th style=" text-align: center;  width: 40%;">@item.Aciklama</th>
+                <th style=" text-align: center;  width: 25%;">@item.AdresAcik</th>
+                <th style=" text-align: center;  width: 9%;">@item.Mail</th>
+                <th style=" text-align: center;  width: 20%;">@item.Telefon</th>
+                <th style=" text-align: center;width: 7%;"><a href="/Admin/IletisimSil/@item.ID" class="btn btn-danger">Sil</a></th>
+                <th style=" text-align: center;  width: 9%;"><a href="/Admin/BlogGetir/@item.ID" class="btn btn-warning">Guncelle</a></th>
+                <th style=" text-align: center;  width: 9%;"><a href="/Home/Iletisim/" class="btn btn-dark">Detay</a></th>
+            </tr>
+
+        }
+    </tbody>
+</table>
+<a href="/Admin/YeniIletisim" class="btn btn-primary" onclick="return confirm('Mevcut varsa ekleme yapmayın sadece o tabloyu düzenleyiniz')">Yeni Iletisim Verisi Ekle</a>
+<br />
+<br />

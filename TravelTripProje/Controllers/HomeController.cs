@@ -43,7 +43,8 @@ namespace TravelTripProje.Controllers
         }
         public ActionResult Iletisim()
         {
-            return View();
+            var degerler = c.AdresBlogs.ToList();
+            return View(degerler);
         }
 
     }

@@ -36,7 +36,7 @@ namespace TravelTripProje.Controllers
                 c.Blogs.Add(p);
                 c.SaveChanges();
             }
-                        
+
             return RedirectToAction("Index");
         }
         public ActionResult BlogSil(int id)
@@ -59,7 +59,7 @@ namespace TravelTripProje.Controllers
                 string yol = "~/Images/" + dosyaYolu;
                 Request.Files[0].SaveAs(Server.MapPath(yol));
                 b.BlogImage = "/Images/" + dosyaYolu;
-                
+
                 var deger = c.Blogs.Find(b.ID);
                 deger.Baslik = b.Baslik;
                 deger.Aciklama = b.Aciklama;
@@ -68,7 +68,7 @@ namespace TravelTripProje.Controllers
                 c.SaveChanges();
 
             }
-            
+
             return RedirectToAction("Index");
         }
         public ActionResult YorumListesi(int SayfaNo = 1)
@@ -159,6 +159,49 @@ namespace TravelTripProje.Controllers
             return RedirectToAction("Hakkimizda");
         }
 
+        public ActionResult Iletisim()
+        {
+            var degerler = c.AdresBlogs.ToList();
+            return View(degerler);
+        }
 
+        [HttpGet]
+        public ActionResult YeniIletisim()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniIletisim(AdresBlog p)
+        {
+            c.AdresBlogs.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Iletisim");
+        }
+
+        public ActionResult IletisimSil(int id)
+        {
+            var degerler = c.AdresBlogs.Find(id);
+            c.AdresBlogs.Remove(degerler);
+            c.SaveChanges();
+            return RedirectToAction("Iletisim");
+        }
+
+        public ActionResult IletisimGetir(int id)
+        {
+            var degerler = c.AdresBlogs.Find(id);
+            return View("IletisimGetir", degerler);
+        }
+        public ActionResult IletisimGuncelle(AdresBlog p)
+        {
+            var degerler = c.AdresBlogs.Find(p.ID);
+            degerler.Baslik = p.Baslik;
+            degerler.Aciklama = p.Aciklama;
+            degerler.AdresAcik = p.AdresAcik;
+            degerler.Mail = p.Mail;
+            degerler.Telefon = p.Telefon;
+         
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+        }
     }
 }

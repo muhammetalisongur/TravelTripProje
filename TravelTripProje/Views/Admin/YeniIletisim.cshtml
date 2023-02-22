@@ -1,0 +1,36 @@
+﻿@model TravelTripProje.Models.Entity.AdresBlog
+@{
+    ViewBag.Title = "YeniIletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("YeniIletisim", "Admin", FormMethod.Post))
+{
+    <br />
+    <h2>Yeni Adres Ekleme Sayfası</h2>
+    <br />
+    <form class="form-group" method="post">
+        <b>@Html.Label("Başlık:")</b>
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control", @required = "required" })
+        <br />
+        <b>@Html.Label("Açıklama:")</b>
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control", @required = "required" })
+        <br />
+        <b>@Html.Label("Açık Adres:")</b>
+        @Html.TextBoxFor(x => x.AdresAcik, new { @class = "form-control", @required = "required" })
+        <br />
+        <b>@Html.Label("Mail Adres:")</b>
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @required = "required" })
+        <br />
+        <b>@Html.Label("Telefon:")</b>
+        @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control", @required = "required" })
+        <br />
+        <span>
+            <button class="btn btn-primary">Adres Ekle</button>
+            <a href="/Admin/Iletisim/" class="btn btn-danger">Iptal Et</a>
+        </span>
+        <br />
+        <br />
+    </form>
+}
+
