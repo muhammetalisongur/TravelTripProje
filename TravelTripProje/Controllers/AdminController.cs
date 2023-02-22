@@ -209,20 +209,6 @@ namespace TravelTripProje.Controllers
             var degerler = c.Iletisims.OrderByDescending(x => x.ID).ToPagedList(SayfaNo, 5);
             return View(degerler);
         }
-        [HttpGet]
-        public ActionResult GelenMaillerEkle()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult GelenMaillerEkle(Iletisim p)
-        {            
-                
-                c.Iletisims.Add(p);
-                c.SaveChanges();
-            
-
-            return RedirectToAction("/Home/Iletisim");
-        }
+        
     }
 }

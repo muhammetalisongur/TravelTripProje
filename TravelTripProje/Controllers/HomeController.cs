@@ -46,6 +46,21 @@ namespace TravelTripProje.Controllers
             var degerler = c.AdresBlogs.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        public ActionResult GelenMaillerEkle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult GelenMaillerEkle(Iletisim p)
+        {
+            c.Iletisims.Add(p);
+            c.SaveChanges();
+            
+
+
+            return RedirectToAction("/Iletisim");
+        }
 
     }
 }

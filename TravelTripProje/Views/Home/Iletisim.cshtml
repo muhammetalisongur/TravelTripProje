@@ -27,27 +27,26 @@
                 </div>
             }
 
-            @using (Html.BeginForm("GelenMaillerEkle", "Admin", FormMethod.Post))
+            @using (Html.BeginForm("GelenMaillerEkle", "Home", FormMethod.Post))
             {
                 <div class="form">
                     <div>
-                        <input type="text" class="textbox" placeholder="Ad Soyad" name="AdSoyad">
+                        <input type="text" class="textbox" placeholder="Ad Soyad" name="AdSoyad" required>
                     </div>
                     <div>
-                        <input type="text" class="textbox" placeholder="Mail Adresiniz..." name="Mail">
+                        <input type="text" class="textbox" placeholder="Mail Adresiniz..." name="Mail" required>
                     </div>
                     <div>
-                        <input type="text" class="textbox" placeholder="Konu" name="Konu">
+                        <input type="text" class="textbox" placeholder="Konu" name="Konu" required>
                     </div>
                     <div>
                         <button class="read" type="submit" onclick="return alert('Mesajınız Gönderildi. En Kısa Sürede Dönüş Sağlanacak...')">Gönder</button>
                         <br />
-
                     </div>
                 </div>
                 <div class="form1">
                     <div>
-                        <textarea placeholder="Mesajınız..." name="Mesaj"></textarea>
+                        <textarea placeholder="Mesajınız..." name="Mesaj" required></textarea>
                     </div>
                 </div>
             }
