@@ -25,7 +25,7 @@
             <tr>
                 <th style=" text-align: center; height: 3%; width: 3%;">@item.ID</th>
                 <th>@item.Aciklama</th>
-                <th><img src="@item.FotoUrl" width="200" height="200" /></th>
+                <th><img src="@item.FotoUrl" width="160" height="80" style=" display: block; margin-left: auto; margin-right: auto;" /></th>
 
                 <th style=" text-align: center;width: 7%;"><a href="/Admin/HakkimizdaSil/@item.ID" class="btn btn-danger">Sil</a></th>
                 <th style=" text-align: center;  width: 9%;"><a href="/Admin/HakkimizdaGetir/@item.ID" class="btn btn-warning">Guncelle</a></th>
@@ -35,17 +35,5 @@
         }
     </tbody>
 </table>
-<a href="/Admin/YeniHakkimizda" class="btn btn-primary">Yeni Hakkimizda Ekle</a>
+<a href="/Admin/YeniHakkimizda" class="btn btn-primary" onclick="return confirm('Mevcut varsa ekleme yapmayın sadece o tabloyu düzenleyiniz')">Yeni Hakkimizda Ekle</a>
 
-
-@*<h2>Hakkımızda</h2>
-@foreach (var item in Model)
-{
-    <img src="@item.FotoUrl" style="width:970px; height:350px" alt="" />
-    <br />
-    <br />
-    @item.Aciklama
-}
-<br />
-<br />
-<br />*@

@@ -11,7 +11,8 @@
  - Iletisim Sayfasi Eklenecek
  - login ekraninda giris basarisiz ise hata verdir viewbag ile (tamamlandi)
  - kayıt ol sayfası yap (tamamlandı)
- - Admin panelinde hakkimizda kismi eklenecek
+ - Admin panelinde hakkimizda kismi eklenecek (tamamlandi)
+ - Admin panelinde hakkimizda kismi duzenle sil eklenecek (tamamlandi)
  - Devamini Oku Kismi Eklenecek Bloglara (tamamlandi)
  - Blog Arsiv, Son Yorum, Son Yazi Listesi (tamamlandi 
  - Admin Paneline girisi siteye ekle button olarak (tamamlandi)

@@ -116,7 +116,7 @@ namespace TravelTripProje.Controllers
         {
             if (Request.Files.Count > 0)
             {
-                string dosyaYolu = Path.GetFileName(Request.Files[0].FileName);
+                string dosyaYolu = Path.GetFileName(Request.Files[1].FileName);
                 string yol = "~/Images/" + dosyaYolu;
                 Request.Files[0].SaveAs(Server.MapPath(yol));
                 h.FotoUrl = "/Images/" + dosyaYolu;
@@ -126,5 +126,39 @@ namespace TravelTripProje.Controllers
 
             return RedirectToAction("Hakkimizda");
         }
+
+        public ActionResult HakkimizdaSil(int id)
+        {
+            var degerler = c.Hakkimizdas.Find(id);
+            c.Hakkimizdas.Remove(degerler);
+            c.SaveChanges();
+            return RedirectToAction("Hakkimizda");
+        }
+
+        public ActionResult HakkimizdaGetir(int id)
+        {
+            var degerler = c.Hakkimizdas.Find(id);
+            return View("HakkimizdaGetir", degerler);
+        }
+        public ActionResult HakkimizdaGuncelle(Hakkimizda h)
+        {
+            if (Request.Files.Count > 0)
+            {
+                string dosyaYolu = Path.GetFileName(Request.Files[0].FileName);
+                string yol = "/Images/" + dosyaYolu;
+                Request.Files[0].SaveAs(Server.MapPath(yol));
+                h.FotoUrl = "/Images/" + dosyaYolu;
+
+                var deger = c.Hakkimizdas.Find(h.ID);
+                deger.Aciklama = h.Aciklama;
+                deger.FotoUrl = h.FotoUrl;
+                c.SaveChanges();
+
+            }
+
+            return RedirectToAction("Hakkimizda");
+        }
+
+
     }
 }

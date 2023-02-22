@@ -1,0 +1,29 @@
+﻿@model TravelTripProje.Models.Entity.Hakkimizda
+
+@{
+    ViewBag.Title = "HakkimizdaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkımızda Duzenleme Sayfasi</h2>
+<br />
+@using (Html.BeginForm("HakkimizdaGuncelle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <b>@Html.LabelFor(x => x.ID)</b>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <b>@Html.LabelFor(x => x.Aciklama)</b>
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
+    <br />
+    <b>@Html.Label("Resim Yükle")</b>
+    <br />
+    <input type="file" name="FotoUrl" required />
+    <br />
+    <br />
+    
+    <span>
+        <button class="btn btn-primary">Hakkımızdayı Guncelle</button>
+        <a href="/Admin/Hakkimizda" class="btn btn-danger">Iptal Et</a>
+    </span>
+
+}

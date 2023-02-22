@@ -23,17 +23,17 @@
         <b>@Html.LabelFor(x => x.Aciklama)</b>
         @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
         <br />
-        <b>@Html.Label("Resim Dosya'dan Yükle")</b>
+        <b>@Html.Label("Resim Yükle")</b>
         <br />
-        <input type="file" name="BlogImage" />
+        <input type="file" name="BlogImage" required />
         <br />
         <br />
-        <b>@Html.Label("Resim URL'den Yükle")</b>
-        @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
-        <br />
-
-        <button class="btn btn-primary">Yeni Yazi Ekle</button>
-
+        
+        
+        <span>
+            <button class="btn btn-primary">Yeni Yazi Ekle</button>
+            <a href="/Admin/Index/" class="btn btn-danger">Iptal Et</a>
+        </span>
     </form>
 }
     <script>
