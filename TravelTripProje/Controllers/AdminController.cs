@@ -12,11 +12,12 @@ namespace TravelTripProje.Controllers
     {
         // GET: Admin
         Context c = new Context();
+        
 
         [Authorize]
-        public ActionResult Index()
+        public ActionResult Index(int SayfaNo = 1)
         {
-            var degerler = c.Blogs.ToList();
+            var degerler = c.Blogs.OrderBy(x => x.ID).ToPagedList(SayfaNo,5);
             return View(degerler);
         }
         [HttpGet]
@@ -53,9 +54,9 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult YorumListesi()
+        public ActionResult YorumListesi(int SayfaNo = 1)
         {
-            var yorumlar = c.Yorumlars.ToList();
+            var yorumlar = c.Yorumlars.OrderBy(x => x.ID).ToPagedList(SayfaNo,5);
             return View(yorumlar);
         }
 
@@ -81,5 +82,6 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("YorumListesi");
         }
+            
     }
 }

@@ -1,35 +1,39 @@
-﻿@using TravelTripProje.Models.Entity
-@model List<Yorumlar>
+﻿@using PagedList
+@using PagedList.Mvc
+@using TravelTripProje.Models.Entity
+@model IPagedList<Yorumlar>
 @{
     ViewBag.Title = "YorumListesi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+
 <h2>Yorum Listesi</h2>
-
-<table class="table table-bordered">
-
-    <tr>
-        <th>ID</th>
-        <th>Kullanici</th>
-        <th>Mail</th>
-        <th>Yorum</th>
-        <th>Blog</th>
-        <th>Sil</th>
-        <th>Guncelle</th>
-    </tr>
+<table class="table table-bordered" style="table-layout: fixed; width: 100%; word-break: break-all ">
+    <thead>
+        <tr>
+            <th style=" text-align: center; height: 3%; width: 3%;">ID</th>
+            <th>Kullanici</th>
+            <th>Mail</th>
+            <th>Yorum</th>
+            <th>Blog</th>
+            <th style=" text-align: center;width: 7%;">Sil</th>
+            <th style=" text-align: center;  width: 9%;">Guncelle</th>
+        </tr>
+    </thead>
     @foreach (var item in Model)
     {
         <tr>
-            <th>@item.ID</th>
+            <th style=" text-align: center; height: 3%; width: 3%;">@item.ID</th>
             <th>@item.KullaniciAdi</th>
             <th>@item.Mail</th>
             <th>@item.Yorum</th>
             <th>@item.Blog.Baslik</th>
-            <th><a href="/Admin/YorumSil/@item.ID" class="btn btn-danger">Sil</a></th>
-            <th><a href="/Admin/YorumGetir/@item.ID" class="btn btn-warning">Guncelle</a></th>
+            <th style=" text-align: center;width: 7%;"><a href="/Admin/YorumSil/@item.ID" class="btn btn-danger">Sil</a></th>
+            <th style=" text-align: center;  width: 9%;"><a href="/Admin/YorumGetir/@item.ID" class="btn btn-warning">Guncelle</a></th>
         </tr>
     }
 
 
 </table>
+@Html.PagedListPager(Model, _sayfaNo => Url.Action("YorumListesi", "Admin", new { SayfaNo = _sayfaNo }))

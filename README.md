@@ -3,14 +3,15 @@
  
  ## Ekstra Eklenecekler
  
- - Yorumlara DataTable Eklenecek
+ - Yorum ve Blog Tablosu Duzenlenecek (tamamlandi)
+ - Yorumlara PagedList Eklenecek (tamamlandi)
  - Iletisim Sayfasi Eklenecek
  - login ekraninda giris basarisiz ise hata verdir viewbag ile (tamamlandi)
  - kayıt ol sayfası yap (tamamlandı)
  - Admin panelinde hakkimizda kismi eklenecek
  - Devamini Oku Kismi Eklenecek Bloglara (tamamlandi)
  - Blog Arsiv, Son Yorum, Son Yazi Listesi (tamamlandi 
- - Admin Paneline Sitede ekle arama kismina
+ - Admin Paneline girisi siteye ekle button olarak (tamamlandi)
 
 ### 1-10'a kadar
 
